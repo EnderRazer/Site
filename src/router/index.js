@@ -25,7 +25,19 @@ export default new Router({
     {
       path: '/teacher',
       name: 'teacher',
-      component: Teacher
+      component: Teacher,
+      children: [
+        {
+          path: '/group1',
+          name: 'group1',
+          component: Group1
+        },
+        {
+          path: '/group2',
+          name: 'group2',
+          component: Group2
+        }
+      ]
     },
     {
       path: '/student',
@@ -36,16 +48,6 @@ export default new Router({
       path: '/admin',
       name: 'admin',
       component: Admin
-    },
-    {
-      path: '/group1',
-      name: 'group1',
-      component: Group1
-    },
-    {
-      path: '/group2',
-      name: 'group2',
-      component: Group2
     }
   ]
 })
