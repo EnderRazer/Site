@@ -5,14 +5,15 @@
       span.navbar-toggler-icon
     #navbarSupportedContent.collapse.navbar-collapse
       ul.navbar-nav.mr-auto
-        li.nav-item(
-          v-for="group in groups"
-          :key="group.title"
-        )
-          router-link.nav-link(
-            :to="group.url"
-          )
-            | {{ group.title }}
+        li.nav-item.dropdown
+          button#dropdownMenuButton.btn.btn-secondary.dropdown-toggle(type='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+            | Группы
+          .dropdown-menu(aria-labelledby='dropdownMenuButton')
+            router-link.dropdown-item(
+              v-for="group in groups"
+              :key="group.title"
+              :to="group.url"
+              ) {{ group.title }}
   router-view
 </template>
 
