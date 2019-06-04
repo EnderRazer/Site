@@ -5,8 +5,11 @@ import Login from '@/components/Auth/Login'
 import Teacher from '@/components/Teacher/Teacher'
 import Student from '@/components/Student/Student'
 import Admin from '@/components/Admin/Admin'
-import Group1 from '@/components/Groups/Group1'
-import Group2 from '@/components/Groups/Group2'
+import Group from '@/components/Groups/Group'
+import RaspisanieT from '@/components/Teacher/RaspisanieT'
+import Poseschenie from '@/components/Student/Poseschenie'
+import RaspisanieS from '@/components/Student/RaspisanieS'
+import Charts from '@/components/Student/Charts'
 
 Vue.use(Router)
 
@@ -28,21 +31,38 @@ export default new Router({
       component: Teacher,
       children: [
         {
-          path: '/group1',
-          name: 'group1',
-          component: Group1
+          path: '/group',
+          name: 'group',
+          component: Group
         },
         {
-          path: '/group2',
-          name: 'group2',
-          component: Group2
+          path: '/raspisanieT',
+          name: 'raspisanieT',
+          component: RaspisanieT
         }
       ]
     },
     {
       path: '/student',
       name: 'student',
-      component: Student
+      component: Student,
+      children: [
+        {
+          path: '/raspisanieS',
+          name: 'raspisanieS',
+          component: RaspisanieS
+        },
+        {
+          path: '/poseschenie',
+          name: 'poseschenie',
+          component: Poseschenie
+        },
+        {
+          path: '/charts',
+          name: 'charts',
+          component: Charts
+        }
+      ]
     },
     {
       path: '/admin',
