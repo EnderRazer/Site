@@ -15,10 +15,6 @@
           router-link.nav-link(
             :to="poseschenie.url"
           ) Посещаемость
-        li.nav-item
-          router-link.nav-link(
-            :to="charts.url"
-          ) Графики посещаемости
   router-view
 </template>
 

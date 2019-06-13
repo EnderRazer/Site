@@ -54,7 +54,7 @@ export default {
 
 <style lang="stylus">
 .navbar-light
-  background-color rgb(255, 219, 88)
+  background-color rgba(255, 178, 15, 0.9)
 .container
   padding-top 56px
   padding-bottom 56px

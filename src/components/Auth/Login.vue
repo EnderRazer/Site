@@ -34,14 +34,14 @@ export default {
         }
         )
         this.links[2].show = true
-        this.$router.push('/teacher')
+        this.$router.push('/raspisenieT')
       } else if (this.role === 'student') {
         this.links.forEach(link => {
           link.show = false
         }
         )
         this.links[1].show = true
-        this.$router.push('/student')
+        this.$router.push('/raspisanieS')
       } else if (this.role === 'admin') {
         this.links.forEach(link => {
           link.show = false

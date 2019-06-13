@@ -10,7 +10,7 @@ export default {
       },
       {
         id: 2,
-        fullname: 'Али Анал',
+        fullname: 'Али Алан',
         birthday: '',
         group_id: [2],
         role: 'student'
